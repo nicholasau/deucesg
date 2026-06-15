@@ -80,61 +80,64 @@
 
 /* Gallery layout override */
 #gallery .grid.gallery,
-.gallery{
-    display:grid !important;
-    grid-template-columns:repeat(4,minmax(0,1fr)) !important;
-    gap:20px !important;
-    max-width:1200px;
-    margin:0 auto;
+.gallery {
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 32px !important;
+    max-width: 1400px;
+    margin: 0 auto;
+    align-items: start;
 }
 
 #gallery .gallery article,
-.gallery article{
-    transform:scale(1);
-    transform-origin:top center;
-    margin-bottom:00px;
-}
-
-@media (max-width:900px){
-    #gallery .grid.gallery,
-    .gallery{
-        grid-template-columns:repeat(2,minmax(0,1fr)) !important;
-    }
-    #gallery .gallery article,
-    .gallery article{
-        transform:scale(0.8);
-        margin-bottom:-60px;
-    }
-}
-
-@media (max-width:600px){
-    #gallery .grid.gallery,
-    .gallery{
-        grid-template-columns:1fr !important;
-    }
-    #gallery .gallery article{
-        transform:none;
-        margin-bottom:20;
-    }
-}
-
-@media (max-width: 600px) {
-  #gallery .grid.gallery,
-  .gallery {
-    grid-template-columns: 1fr !important;
-    gap: 36px !important;
-  }
-
-  #gallery .gallery article,
-  .gallery article {
+.gallery article {
     transform: none !important;
-    margin-bottom: 0 !important;
-  }
+    margin: 0 !important;
+    padding: 18px;
+}
 
-  #gallery .gallery article img,
-  .gallery article img {
+#gallery .gallery article img,
+.gallery article img {
     width: 100% !important;
     height: auto !important;
     display: block;
-  }
+    object-fit: contain;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    #gallery .grid.gallery,
+    .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 28px !important;
+    }
+
+    #gallery .gallery article,
+    .gallery article {
+        transform: none !important;
+        margin: 0 !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    #gallery .grid.gallery,
+    .gallery {
+        grid-template-columns: 1fr !important;
+        gap: 32px !important;
+    }
+
+    #gallery .gallery article,
+    .gallery article {
+        transform: none !important;
+        margin: 0 !important;
+        padding: 18px;
+    }
+
+    #gallery .gallery article img,
+    .gallery article img {
+        width: 100% !important;
+        height: auto !important;
+        max-height: none !important;
+    }
 }
