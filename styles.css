@@ -1,0 +1,119 @@
+:root{--bg:#07070a;--panel:#11131a;--panel2:#171923;--text:#f4f0e8;--muted:#b7afa2;--gold:#d6a85b;--line:#2a2d38}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at top,#17111f 0,#07070a 38%);color:var(--text);font-family:Inter,Arial,sans-serif}a{color:inherit;text-decoration:none}.nav{position:sticky;top:0;z-index:5;display:flex;align-items:center;justify-content:space-between;padding:18px 6%;background:rgba(7,7,10,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;text-decoration:none;flex:0 0 auto}.nav nav{display:flex;gap:24px;font-size:14px;color:var(--muted)}.btn{display:inline-block;background:linear-gradient(135deg,var(--gold),#f0c67b);color:#14100a;padding:14px 22px;border-radius:8px;font-weight:800;text-transform:uppercase;font-size:13px;letter-spacing:.5px}.btn.small{padding:10px 16px}.btn.ghost{background:transparent;color:var(--text);border:1px solid var(--line)}.hero{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;min-height:720px;padding:80px 6%}.eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:1.8px;font-size:12px;font-weight:800}.hero h1{font-size:72px;line-height:.95;margin:12px 0}.hero h1 span{color:var(--gold)}.lead{max-width:560px;color:var(--muted);font-size:19px;line-height:1.7}.actions{display:flex;gap:16px;margin-top:32px}.hero-art{position:relative;height:480px}.card{position:absolute;width:250px;border-radius:22px;box-shadow:0 30px 80px rgba(0,0,0,.55)}.card img{width:100%;display:block}.c1{left:30px;top:90px;transform:rotate(-12deg)}.c2{left:185px;top:10px;z-index:2}.c3{right:30px;top:110px;transform:rotate(12deg)}.strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border-block:1px solid var(--line)}.strip div{background:#090a0e;padding:28px 6%;text-align:center}.strip span{display:block;color:var(--muted);margin-top:6px}.section{padding:88px 6%}.section h2{font-size:42px;margin:10px 0 28px}.alt{background:rgba(255,255,255,.025);border-block:1px solid var(--line)}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.gallery article,.pricing article,.steps div{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:18px;padding:18px}.gallery img{width:100%;border-radius:14px;border:1px solid #303340}.gallery p,.steps p,.faq p,.note,.contact p{color:var(--muted);line-height:1.7}.section-intro{max-width:760px;color:var(--muted);line-height:1.7;margin-top:-10px;margin-bottom:28px}.reviews-section{background:radial-gradient(circle at top right,rgba(214,168,91,.08),transparent 36%)}.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.review-embed{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:18px;padding:14px;min-height:460px;display:flex;align-items:flex-start;justify-content:center;overflow:hidden}.review-embed .instagram-media{min-width:0!important;width:100%!important;max-width:540px!important;margin:0 auto!important;background:#fff!important;border-radius:12px!important}
+.pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.pricing article{padding:30px;position:relative}.featured{border-color:var(--gold)!important;box-shadow:0 0 0 1px rgba(214,168,91,.25)}.tag{position:absolute;right:24px;top:-12px;background:var(--gold);color:#16110a;padding:5px 12px;border-radius:20px;font-size:11px;font-weight:900}.price{font-size:44px;font-weight:900;margin:12px 0}.pricing li{margin:12px 0;color:var(--muted)}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.steps span{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--gold);color:#111;font-weight:900}.centre{margin-top:32px}.faq{display:grid;gap:14px;max-width:900px}.faq details{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px}.faq summary{cursor:pointer;font-weight:800}.contact{text-align:center;max-width:900px;margin:auto}.social{margin-top:20px}footer{text-align:center;color:var(--muted);padding:28px;border-top:1px solid var(--line)}@media(max-width:900px){.nav nav{display:none}.hero{grid-template-columns:1fr;min-height:auto}.hero h1{font-size:48px}.hero-art{height:380px}.card{width:190px}.strip,.grid,.reviews-grid,.pricing,.steps{grid-template-columns:1fr}.section{padding:60px 5%}}
+
+
+/* Logo header update */
+.brand img{
+  width:40px;
+  height:40px;
+}
+
+.nav{
+  min-height:72px;
+}
+
+/* Fixed-height Instagram review embeds */
+.reviews-grid{
+  align-items:start;
+}
+
+.review-embed{
+  min-height:0;
+}
+
+.instagram-card{
+  height:420px;
+  overflow:hidden;
+  border-radius:20px;
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.08);
+  padding:10px;
+}
+
+.instagram-card blockquote{
+  margin:0!important;
+  min-width:100%!important;
+  max-width:100%!important;
+}
+
+.instagram-card iframe{
+  height:900px!important;
+}
+
+@media (max-width:768px){
+  .brand img{
+    width:56px;
+    height:56px;
+  }
+
+  .nav{
+    min-height:80px;
+  }
+
+  .instagram-card{
+    height:350px;
+  }
+}
+
+/* Force header logo size */
+.nav .brand {
+  width: 56px !important;
+  height: 56px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+}
+
+.nav .brand img {
+  width: 56px !important;
+  height: 56px !important;
+  max-width: 56px !important;
+  max-height: 56px !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+
+.nav {
+  min-height: 76px !important;
+}
+
+/* Gallery layout override */
+#gallery .grid.gallery,
+.gallery{
+    display:grid !important;
+    grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+    gap:20px !important;
+    max-width:1200px;
+    margin:0 auto;
+}
+
+#gallery .gallery article,
+.gallery article{
+    transform:scale(1);
+    transform-origin:top center;
+    margin-bottom:00px;
+}
+
+@media (max-width:900px){
+    #gallery .grid.gallery,
+    .gallery{
+        grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    }
+    #gallery .gallery article,
+    .gallery article{
+        transform:scale(0.8);
+        margin-bottom:-60px;
+    }
+}
+
+@media (max-width:600px){
+    #gallery .grid.gallery,
+    .gallery{
+        grid-template-columns:1fr !important;
+    }
+    #gallery .gallery article{
+        transform:none;
+        margin-bottom:20;
+    }
+}
