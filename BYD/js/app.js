@@ -1,39 +1,30 @@
-const buttons = document.querySelectorAll(".filter-btn");
-const cards = document.querySelectorAll(".app-card");
+document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll(".filter-btn");
+  const cards = document.querySelectorAll(".app-card");
 
-buttons.forEach(button => {
-
+  buttons.forEach(button => {
     button.addEventListener("click", () => {
+      const selectedFilter = button.dataset.filter.toLowerCase();
 
-        buttons.forEach(btn =>
-            btn.classList.remove("active")
-        );
+      buttons.forEach(btn => btn.classList.remove("active"));
+      button.classList.add("active");
 
-        button.classList.add("active");
+      cards.forEach(card => {
+        const tagElement = card.querySelector(".tag");
 
-        const filter = button.dataset.filter;
+        if (!tagElement) {
+          card.style.display = "none";
+          return;
+        }
 
-        cards.forEach(card => {
+        const cardTag = tagElement.textContent.trim().toLowerCase();
 
-            if(filter === "all"){
-                card.style.display = "";
-                return;
-            }
-
-            const tag =
-                card.querySelector(".tag")
-                    .textContent
-                    .trim()
-                    .toLowerCase();
-
-            if(tag === filter.toLowerCase()){
-                card.style.display = "";
-            } else {
-                card.style.display = "none";
-            }
-
-        });
-
+        if (selectedFilter === "all" || cardTag === selectedFilter) {
+          card.style.display = "";
+        } else {
+          card.style.display = "none";
+        }
+      });
     });
-
+  });
 });
