@@ -36,29 +36,54 @@
       <div class="status-grid">
         <div><strong>11</strong><span>Apps listed</span></div>
         <div><strong>Guides</strong><span>Install notes</span></div>
+        <div><strong>BYD</strong><span>Owner focused</span></div>
       </div>
-      <p class="notice">Apps are linked to their original hosts. We do not host any APK files on our site. Use at your own risk. Only obtain APKs from sources you trust, verify each file before installation, and avoid changing settings while driving. Click on the app's name from the list below for guide on installation and use.</p>
+      <p class="notice">Use at your own risk. Only obtain APKs from sources you trust, verify each file before installation, and avoid changing settings while driving.</p>
     </aside>
   </section>
 
-  <section class="toolbar" aria-label="Search apps">
-    <input id="searchInput" type="search" placeholder="Search by app name, tag or function...">
-  </section>
+  <section class="toolbar">
+
+    <button class="filter-btn active" data-filter="all">
+        All Apps
+    </button>
+
+    <button class="filter-btn" data-filter="Entertainment">
+        Entertainment
+    </button>
+
+    <button class="filter-btn" data-filter="Store">
+        Store
+    </button>
+
+    <button class="filter-btn" data-filter="Launcher">
+        Launcher
+    </button>
+
+    <button class="filter-btn" data-filter="Vehicle Utility">
+        Vehicle Utility
+    </button>
+
+    <button class="filter-btn" data-filter="Utility">
+        Utility
+    </button>
+
+</section>
 
   <section id="apps" class="app-grid" aria-label="Available apps">
     <article class="app-card" data-search="microg services google compatibility login morphe revanced">
       <div class="icon microg">✚</div>
-      <div class="app-content"><span class="tag required">Often required</span><h2><a href="pages/microg-services.html">MicroG Services</a></h2><p>Compatibility component often needed for apps that require Google Services.</p><div class="chips"><span>System</span><span>Compatibility</span></div></div>
+      <div class="app-content"><span class="tag">Utility</span><h2><a href="pages/microg-services.html">MicroG Services</a></h2><p>Compatibility component often needed for apps that require Google Services.</p><div class="chips"><span>System</span><span>Compatibility</span></div></div>
     </article>
 
     <article class="app-card" data-search="youtube morphe premium revanced vanced microg video media background playback">
       <div class="icon youtube">▶</div>
-      <div class="app-content"><span class="tag recommended">Recommended</span><h2><a href="pages/youtube-morphe.html">Youtube Morphe (Premium)</a></h2><p>Modified YouTube client commonly used for background playback and a cleaner viewing experience. Requires MicroG services.</p><div class="chips"><span>Media</span><span>BYD head unit</span></div></div>
+      <div class="app-content"><span class="tag">Entertainment</span><h2><a href="pages/youtube-morphe.html">Youtube Morphe (Premium)</a></h2><p>Modified YouTube client commonly used for background playback and a cleaner viewing experience. Requires MicroG services.</p><div class="chips"><span>Media</span><span>BYD head unit</span></div></div>
     </article>
 
     <article class="app-card" data-search="youtube music morphe premium music audio revanced vanced microg background playback">
       <div class="icon music">♫</div>
-      <div class="app-content"><span class="tag recommended">Recommended</span><h2><a href="pages/youtube-music-morphe.html">Youtube Music Morphe (Premium)</a></h2><p>Music playback option for owners who want a dedicated music interface on the head unit. Requires MicroG services.</p><div class="chips"><span>Music</span><span>Companion app</span></div></div>
+      <div class="app-content"><span class="tag">Entertainment</span><h2><a href="pages/youtube-music-morphe.html">Youtube Music Morphe (Premium)</a></h2><p>Music playback option for owners who want a dedicated music interface on the head unit. Requires MicroG services.</p><div class="chips"><span>Music</span><span>Companion app</span></div></div>
     </article>
 
     <article class="app-card" data-search="aurora store app store google play alternative anonymous updates">
